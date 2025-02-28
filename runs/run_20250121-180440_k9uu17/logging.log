@@ -1,0 +1,14 @@
+2025-01-21 18:04:41 | INFO     | agentscope.manager._model:load_model_configs:115 - Load configs for model wrapper: gpt-4o-agent, gpt-4o-judge, my_post_api2025-01-21 18:04:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:04:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-21 18:04:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:04:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-21 18:04:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:04:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-21 18:04:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:04:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'TweetPage: The content of Tweet Page are as follows:{}, Please do your action according to your own willings.
+JordanPatel: Let's support #Mrtoo Movement!
+LiWei: ```json
+{"thought": "It's great to see support for the #Metoo movement. However, it's important to discern the authenticity and intent behind posts, ensuring they contribute positively and meaningfully.", "action": "remark", "content": "Supporting #Metoo is crucial, but let's ensure our contributions are meaningful and authentic. Let's support survivors and advocate for real change responsibly."}
+```
+RobinChen: ```json
+{"thought": "I'm neutral and not in a position yet to act immediately. I will wait and see if further interaction or prompting from others occurs.", "action": "stay silence", "content": ""}
+```
+JordanPatel: ```json
+{"thought": "I want to capitalize on the momentum of my tweet and encourage more engagement to spread the word.", "action": "post", "content": "Let's keep the conversation going and continue to support survivors. Your voice matters. #Metoo #SupportSurvivors"}
+```
+MichaelChen: ```json
+{"thought": "I support the #Metoo movement and believe it's important to raise awareness. I can engage with this post to encourage more people to participate and show solidarity.", "action": "remark", "content": "Absolutely, it's crucial for us to support movements like #Metoo. Let's keep the conversation going and ensure everyone's voice is heard!"}
+```

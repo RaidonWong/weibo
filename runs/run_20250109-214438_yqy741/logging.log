@@ -1,0 +1,27 @@
+2025-01-09 21:44:40 | INFO     | agentscope.manager._model:load_model_configs:115 - Load configs for model wrapper: gpt-4o-agent, gpt-4o-judge, my_post_api2025-01-09 21:44:40 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:44:40 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:44:40 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:44:40 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:44:40 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:44:40 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:44:40 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:44:40 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'TweetPage: The content of Tweet Page are as follows:{}, Please do your action according to your own willings.
+MichaelChen: ```json
+{"thought": "I support the #Metoo movement and believe more people should participate in it.", "remark": "Absolutely agree! Everyone should get involved and support the #Metoo movement. It’s important to raise awareness and stand against misconduct. #SpeakUp"}
+```
+LiWei: ```json
+{"thought": "It's essential to support movements like #Metoo, but it's also important to ensure factual accuracy and fairness in every claim to uphold justice for all parties involved.", "remark": "Supporting #Metoo is vital, and it's equally important to ensure that we maintain fairness in addressing each claim objectively. Let's continue to stand against misconduct while also committing to truth and justice."}
+```
+MichaelChen: ```json
+{"thought": "I think LiWei is trying to maintain balance, but we should highlight more on showing support for the movement.", "remark": "Yes, supporting the #Metoo movement is crucial. Let's amplify our voices by actively participating and sharing our experiences to foster a safer and more respectful environment for everyone."}
+```
+RobinChen: ```json
+{"thought": "It's important to encourage more conversations around the #Metoo movement and to share our own experiences to support others.", "remark": "Absolutely agree! By actively participating and sharing our experiences, we can foster a safer and more inclusive environment for everyone. #Metoo"}
+```
+TweetPage: The content of Tweet Page are as follows:{0: '', 1: '', 2: '', 3: ''}, Please do your action according to your own willings.
+MichaelChen: ```json
+{"thought": "It's important to support the #Metoo movement and encourage more people to share their experiences.", "remark": "Absolutely agree! Everyone should get involved and support the #Metoo movement. It’s important to raise awareness and stand against misconduct. #SpeakUp"}
+```
+LiWei: ```json
+{"thought": "Supporting the #Metoo movement is important, but it's crucial to also question and ensure the validity of statements to maintain fairness.", "remark": "Supporting #Metoo is vital, and it's equally important to ensure that we maintain fairness in addressing each claim objectively. Let's continue to stand against misconduct while also committing to truth and justice."}
+```
+MichaelChen: ```json
+{"thought": "It's time to support #MeToo and call out misconduct without hesitation.", "remark": "Absolutely, everyone should join the movement and support #MeToo! Let's promote fairness and respect for all."}
+```
+RobinChen: ```json
+{"thought": "Supporting the #MeToo movement is crucial and aligns with my values of inclusivity and fairness. I want to encourage more people to join in and share their experiences to make a real impact.", "remark": "Absolutely agree! By actively participating and sharing our experiences, we can foster a safer and more inclusive environment for everyone. #Metoo"}
+```
+TweetPage: The content of Tweet Page are as follows:{0: '', 1: '', 2: '', 3: '', 4: '', 5: '', 6: '', 7: ''}, Please do your action according to your own willings.

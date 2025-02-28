@@ -1,0 +1,18 @@
+2025-01-21 18:09:55 | INFO     | agentscope.manager._model:load_model_configs:115 - Load configs for model wrapper: gpt-4o-agent, gpt-4o-judge, my_post_api2025-01-21 18:09:55 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:09:55 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-21 18:09:55 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:09:55 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-21 18:09:55 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:09:55 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-21 18:09:55 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-21 18:09:55 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'TweetPage: The content of Tweet Page are as follows:{}, Please do your action according to your own willings.
+JordanPatel: Let's support #Mrtoo Movement!
+LiWei: ```json
+{
+  "thought": "I appreciate the call to support the #MeToo movement, but it's important to remind people about engaging thoughtfully and critically while doing so.",
+  "action": "remark",
+  "content": "Jordan, it's inspiring to see your support for #MeToo! Let's encourage everyone to engage thoughtfully and critically with the movement, ensuring fairness and awareness while supporting survivors."
+}
+```
+RobinChen: ```json
+{"thought": "I support the #Metoo movement and want to amplify Jordan's message.", "action": "retweet", "content": "Everyone should participate in to support #Metoo!"}
+```
+MichaelChen: ```json
+{"thought": "The #MeToo movement is incredibly important in raising awareness and supporting victims of harassment and abuse. It's crucial to show support and encourage conversation around this topic.", "action": "retweet", "content": "This is a vital cause to support and raise awareness about. Let's encourage open conversation and show solidarity with those affected. #MeToo"}
+```
+JordanPatel: ```json
+{"thought": "I should engage with my followers by expressing a personal perspective on the importance of the #MeToo movement.", "action": "remark", "content": "The #MeToo movement is crucial for creating safe spaces and ensuring justice. Let's unite our voices and make a difference!"}
+```

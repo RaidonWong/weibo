@@ -1,0 +1,1 @@
+2025-01-20 17:25:49 | INFO     | agentscope.manager._model:load_model_configs:115 - Load configs for model wrapper: gpt-4o-agent, gpt-4o-judge, my_post_api

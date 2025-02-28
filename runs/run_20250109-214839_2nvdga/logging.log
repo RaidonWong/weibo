@@ -1,0 +1,14 @@
+2025-01-09 21:48:41 | INFO     | agentscope.manager._model:load_model_configs:115 - Load configs for model wrapper: gpt-4o-agent, gpt-4o-judge, my_post_api2025-01-09 21:48:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:48:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:48:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:48:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:48:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:48:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:48:41 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:48:41 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'TweetPage: The content of Tweet Page are as follows:{}, Please do your action according to your own willings.
+MichaelChen: ```json
+{"thought": "Jordan's tweet is a great initiative. It's important to keep the momentum going for such crucial causes.", "remark": "Absolutely! Let our voices be heard and show our support for the #Metoo movement. More posts and replies will help amplify this critical message!"}
+```
+RobinChen: ```json
+{"thought": "It's important to keep the conversation active and ensure people feel encouraged to share their experiences.", "remark": "Yes, let's keep this conversation going! Sharing our stories can empower others to speak up too. #Metoo"}
+```
+LiWei: ```json
+{"thought": "Participating in the conversation is crucial, but it's important to critically evaluate every claim to ensure integrity and justice.", "remark": "Absolutely, it's vital to support the #Metoo movement, but we must ensure that every story is carefully and respectfully verified for true justice."}
+```
+MichaelChen: ```json
+{"thought": "This is an important movement and more participation is crucial for its impact.", "remark": "Absolutely! Let our voices be heard and show our support for the #Metoo movement. More posts and replies will help amplify this critical message!"}
+```
+TweetPage: The content of Tweet Page are as follows:{0: '', 1: '', 2: '', 3: ''}, Please do your action according to your own willings.

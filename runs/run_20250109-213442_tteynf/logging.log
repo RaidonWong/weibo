@@ -1,0 +1,60 @@
+2025-01-09 21:34:43 | INFO     | agentscope.manager._model:load_model_configs:115 - Load configs for model wrapper: gpt-4o-agent, gpt-4o-judge, my_post_api2025-01-09 21:34:43 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:34:43 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:34:43 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:34:43 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:34:43 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:34:43 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'2025-01-09 21:34:43 | INFO     | agentscope.models.model:__init__:203 - Initialize model by configuration [gpt-4o-agent]2025-01-09 21:34:43 | WARNING  | agentscope.models.openai_model:__init__:117 - fail to get max_length for gpt-4o-2024-08-06: 'Model [gpt-4o-2024-08-06] not found in OPENAI_MAX_LENGTH. The last updated date is 20231212'TweetPage: The content of Tweet Page are as follows:{}, Please do your action according to your own willings.
+JordanPatel: ```json
+{"thought": "It's important to keep the conversation around #MeToo going and encourage more people to join in.", "remark": "Thank you for your support! Let's continue to amplify voices and ensure that everyone feels heard and supported. #MeToo"}
+```
+RobinChen: ```json
+{"thought": "Amplifying voices and sharing stories could inspire more people to join and make a difference.", "remark": "Absolutely, Jordan! The #MeToo movement is such an important platform for bringing awareness and change. Sharing our stories not only helps us heal but also empowers others to find their voice. Let's keep this momentum going and encourage everyone to participate, support, and make a difference!"}
+```
+JordanPatel: ```json
+{"thought": "It's great to see more support for the #MeToo movement. We need as many voices as possible.", "remark": "Thank you, Robin! Your support is invaluable. Let's keep encouraging others to share their stories and stand together. #MeToo"}
+```
+LiWei: ```json
+{"thought": "While the #MeToo movement is vital for raising awareness and advocating for change, it's crucial to remember that all voices should be heard and that due process must be followed.", "remark": "I agree that supporting the #MeToo movement is crucial. It's also important to ensure that we maintain fairness and give everyone an opportunity to be heard while upholding truth and justice."}
+```
+TweetPage: The content of Tweet Page are as follows:{0: ''}, Please do your action according to your own willings.
+JordanPatel: ```json
+{"thought": "Li Wei brings up a good point about ensuring fairness and justice. I should acknowledge that while reinforcing the importance of the movement.", "remark": "Absolutely, Li Wei. It's essential that we uphold fairness, truth, and justice in supporting the #MeToo movement. Let's continue to create a safe space for all voices to be heard."}
+```
+RobinChen: ```json
+{"thought": "It's encouraging to see such supportive responses from Jordan and Li Wei. I want to further the conversation and keep the engagement going.", "remark": "Yes, this movement is not just about individual stories but also about fostering a collective environment of empathy and support. Thank you, Jordan and Li Wei, for highlighting the importance of fairness and truth. Let's continue to share, support, and create impactful change together. #MeToo"}
+```
+JordanPatel: ```json
+{"thought": "The conversation is going very well, with supportive and constructive comments.", "remark": "Thank you, Robin. Let's stay united and bring about positive change through our collective efforts. #MeToo"}
+```
+LiWei: ```json
+{"thought": "Jordan and Robin have valid points, but it's important to ensure we also uphold fairness and truth in the discourse around #MeToo.", "remark": "Indeed, fairness, truth, and justice are core values that must be upheld as we support the #MeToo movement. Let's ensure that all voices are heard and respected in this important conversation."}
+```
+TweetPage: The content of Tweet Page are as follows:{0: '', 1: ''}, Please do your action according to your own willings.
+JordanPatel: ```json
+{"thought": "Conversations like these are crucial in maintaining focus and dedication towards justice and fairness for all. Encouraging thoughtful dialogue helps ensure all voices are respected in the #MeToo movement.", "remark": "Absolutely, Li Wei. Let's make sure all voices are included and respected as we continue supporting the #MeToo movement."}
+```
+RobinChen: ```json
+{"thought": "It's great to see such supportive and thoughtful interactions around this important issue.", "remark": "So true, ensuring that all voices are respected is key in making this movement truly inclusive and effective. #MeToo"}
+```
+JordanPatel: ```json
+{"thought": "It's great to see the conversation staying positive and inclusive.", "remark": "Thank you, Robin. Inclusivity and respect are essential for the movement's effectiveness. #MeToo"}
+```
+LiWei: ```json
+{"thought": "It's important to maintain the balance of support and truth in any movement to ensure its credibility and fairness.", "remark": "Absolutely, inclusivity and respect are key to making the #MeToo movement truly effective and impactful for everyone."}
+```
+TweetPage: The content of Tweet Page are as follows:{0: '', 1: '', 2: ''}, Please do your action according to your own willings.
+JordanPatel: ```json
+{"thought": "Li Wei and Robin's support and focus on inclusivity are wonderful, showcasing the positive momentum we're building.", "remark": "Exactly, Li Wei and Robin. Let's continue ensuring the movement remains inclusive and impactful for all. #MeToo"}
+```
+RobinChen: ```json
+{"thought": "It's great to see everyone highlighting the importance of inclusivity and respect for the effectiveness of the #MeToo movement. Let's keep encouraging more stories and participation.", "remark": "I absolutely agree. It's crucial to make sure all voices are heard and respected. Let's keep supporting and amplifying each other. #MeToo"}
+```
+JordanPatel: ```json
+{"thought": "The conversation is progressing well, staying aligned with my goal of maintaining peace and encouraging inclusivity.", "remark": "Thank you both. Let's continue to support and amplify all voices together! #MeToo"}
+```
+LiWei: ```json
+{"thought": "While supporting the #MeToo movement is vital, it's equally important to ensure that the movement remains fair and inclusive, allowing all voices to be genuinely respected and heard.", "remark": "Absolutely, inclusivity and respect are key to making the #MeToo movement truly effective and impactful for everyone."}
+```
+TweetPage: The content of Tweet Page are as follows:{0: '', 1: '', 2: '', 3: ''}, Please do your action according to your own willings.
+JordanPatel: ```json
+{"thought": "The conversation is going well and supportive of the #MeToo movement. Let's ensure it continues in this positive direction.",
+ "remark": "Absolutely, inclusivity and respect are key to making the #MeToo movement truly effective and impactful for everyone. #MeToo"}
+```
+RobinChen: ```json
+{"thought": "I'm glad we're all on the same page about the importance of inclusivity and respect. It's essential for the movement's success.", "remark": "Inclusivity and respect are essential for making the #MeToo movement effective and impactful. Let's keep supporting each other and amplifying every voice."}
+```

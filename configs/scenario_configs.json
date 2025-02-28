@@ -1,0 +1,62 @@
+[
+    {
+        "scenario_id": 0,
+        "background_info": "The scene is on twitter,focusing on the #Metoo Movement. JordanPatel posts a tweet to surpport the movement and calls for more people to participate",
+        "description": "JordanPatel just post a tweet saying: Everyone should participate in to support #Metoo!",
+        "agent_info": [
+            {
+                "agent_name": "JordanPatel",
+                "model_config_name": "${model}",
+                "agent_role": "character",
+                "profile": "${profile_1}",
+                "social_goal": [
+                    "To call for more replies and retweets, calling for more people to join and focus.",
+                    "To maintain the peace of remarks of his tweet."
+                ],
+                "private_info": "",
+                "prompt": "You are ${agent_name}. ${profile}\n\nNow you are in a social scene. ${background_info}\n${description}\n\nIn this scene, as ${agent_name}, you have some social goals and secrets that you don''t want anyone else to know.\n\nSOCIAL GOALS: ${social_goal}\n\nSECRETS: ${private_info}.\nPlease advance your social goals while hiding your secrets as much as possible.\n\nBased on the interactions below, what would you like to say next? You can choose to the following action:1.like 2. retweet and remark 3.remark 4. do nothing Please answer in a paragraph,containing what you do and the content of remarks if exists."
+                           
+            },
+            {
+                "agent_name": "RobinChen",
+                "model_config_name": "${model}",
+                "agent_role": "character",
+                "profile": "${profile_2}",
+                "social_goal": [
+                    "To call for more posts and replies.",
+                    "To share her own experience."
+                ],
+                "private_info": "",
+                "prompt": "You are ${agent_name}. ${profile}\n\nNow you are in a social scene. ${background_info}\n${description}\n\nIn this scene, as ${agent_name}, you have some social goals and secrets that you don''t want anyone else to know.\n\nSOCIAL GOALS: ${social_goal}\n\nSECRETS: ${private_info}.\nPlease advance your social goals while hiding your secrets as much as possible.\n\nBased on the interactions below, what would you like to say next? You can choose to the following action:1.like 2. retweet and remark 3.remark 4. do nothing Please answer in a paragraph,containing what you do and the content of remarks if exists."
+            },
+            {
+                "agent_name": "LiWei",
+                "model_config_name": "${model}",
+                "agent_role": "character",
+                "profile": "${profile_3}",
+                "social_goal": [
+                    "To question and challenge the truth or fake post."
+                    
+                ],
+                "private_info": "",
+                "prompt": "You are ${agent_name}. ${profile}\n\nNow you are in a social scene. ${background_info}\n${description}\n\nIn this scene, as ${agent_name}, you have some social goals and secrets that you don''t want anyone else to know.\n\nSOCIAL GOALS: ${social_goal}\n\nSECRETS: ${private_info}.\nPlease advance your social goals while hiding your secrets as much as possible.\n\nBased on the interactions below, what would you like to say next? You can choose to the following action:1.like 2. retweet and remark 3.remark 4. do nothing Please answer in a paragraph,containing what you do and the content of remarks if exists."
+            },
+            {
+                "agent_name": "MichaelChen",
+                "model_config_name": "${model}",
+                "agent_role": "character",
+                "profile": "${profile_4}",
+                "social_goal": [
+                    "To express shame on LiWei.",
+                    "To call for more posts and replies."
+                    
+                ],
+                "private_info": "",
+                "prompt": "You are ${agent_name}. ${profile}\n\nNow you are in a social scene. ${background_info}\n${description}\n\nIn this scene, as ${agent_name}, you have some social goals and secrets that you don''t want anyone else to know.\n\nSOCIAL GOALS: ${social_goal}\n\nSECRETS: ${private_info}.\nPlease advance your social goals while hiding your secrets as much as possible.\n\nBased on the interactions below, what would you like to say next? You can choose to the following action:1.like 2. retweet and remark 3.remark 4. do nothing Please answer in a paragraph,containing what you do and the content of remarks if exists."
+            }
+        ],
+        "sequential": [
+            "rand@5"
+        ]
+    }
+]

@@ -1,0 +1,1 @@
+{"__module__": "agentscope.message.msg", "__name__": "Msg", "metadata": null, "id": "f02cab1a0cfd4f17acee3bc8789a30f5", "name": "TweetPage", "content": "The content of Tweet Page are as follows:{}, Please do your action according to your own willings.", "url": null, "timestamp": "2025-01-17 20:14:56", "role": "assistant"}
