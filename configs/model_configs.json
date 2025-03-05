@@ -1,6 +1,19 @@
 [
     {
         "model_type": "openai_chat",
+        "config_name": "llama",
+        "model_name": "/root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct",
+        "client_args": {
+        "base_url": "http://127.0.0.1:56034/v1"
+    },
+        "generate_args": {
+            "temperature": 1,
+            "max_tokens": 128
+        }
+        
+    },
+    {
+        "model_type": "openai_chat",
         "config_name": "gpt-4o-agent",
         "model_name": "gpt-4o-2024-08-06",
         "generate_args": {

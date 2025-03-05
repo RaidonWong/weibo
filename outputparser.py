@@ -80,15 +80,24 @@ class TwitterParser(OutputParser):
             and cleaned_output[1].startswith("Action:")
             # and cleaned_output[2].startswith("Attitude:")
             )
+        or
+            (
+            len(cleaned_output) >= 4    
+            and cleaned_output[2].startswith("Thought:")
+            and cleaned_output[3].startswith("Action:")
+            # and cleaned_output[2].startswith("Attitude:")
+            )
         ):
             raise OutputParserError(text)
 
         if cleaned_output[1].startswith("Action:"):
             action = cleaned_output[1][len("Action:") :].strip()
             if action.endswith('))'):action = action[:-1]
-        else:
+        elif cleaned_output[2].startswith("Action:"):
             action = cleaned_output[2][len("Action:") :].strip()
             if action.endswith('))'):action = action[:-1]
-        
+        elif cleaned_output[3].startswith("Action:"):
+            action = cleaned_output[3][len("Action:") :].strip()
+            if action.endswith('))'):action = action[:-1]
         return AgentFinish({"output": action,}, text)
 

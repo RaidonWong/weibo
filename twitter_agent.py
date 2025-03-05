@@ -83,30 +83,38 @@ class TwitterAgent(AgentBase):
     def __init__(
         self,
         name: str,
+        prompt_template: str ,
+        role_description: str ,
+        info_box: InfoBox,
+        page: TwitterPage,
+        llm:BaseLLM,
+        model_config_name: str,
+        current_time: str,
+        context_prompt_template: str ,
+        personal_history: MemoryBase ,
+        output_parser: OutputParser,
         sys_prompt: str="Please action in your role.",
-        model_config_name: str = None,
+        
         use_memory: bool = True,
-        role_description: str = Field(default=""),
+        
         max_retries: Optional[int] = 3,
-        prompt_template: str = Field(default=""),
+        
         async_mode: bool =True,
-        current_time: str = None,
+        
         environment: BaseEnvironment = None,
         step_cnt: int = 0,
-        page: TwitterPage = None,
-        info_box: InfoBox = None,
-        output_parser: OutputParser=None,
-        personal_history: MemoryBase = None,
+        
+        
+        
+        
         retrieved_memory:str = "",
         data_collector = {},
         receiver: Set[str] = Field(default=set({"all"})),
         atts: list = [],
-        llm:BaseLLM=None,
-        
         memory: BaseMemory = Field(default_factory=PersonalMemory),
         memory_manipulator: Optional[BaseMemoryManipulator] = None,
     
-        context_prompt_template: str = Field(default=""),
+        
 
         manipulated_memory: str = Field(
             default="", description="one fragment used in prompt construction"
@@ -156,14 +164,15 @@ class TwitterAgent(AgentBase):
         self.personal_history = personal_history
         self.retrieved_memory = retrieved_memory
         self.data_collector = data_collector
-        self.prompt_template: str = Field(default="")
+        self.prompt_template=prompt_template
         self.context_prompt_template = context_prompt_template
         self.manipulated_memory = manipulated_memory
         self.memory_manipulator=memory_manipulator
-        self.role_description: str = Field(default="")
+        self.role_description=role_description
         self.max_retry: int = 2
         self.memory=memory
-        self.output_parser: OutputParser=output_parser
+        self.llm=llm
+        self.output_parser=output_parser
         self.receiver: Set[str] = Field(default=set({"all"}))
         
        
@@ -204,6 +213,7 @@ class TwitterAgent(AgentBase):
         - ${trigger_news}: desc of the trigger event
         - ${info_box}: replies in notifications
         """
+        
         input_arguments = {
             "agent_name": self.name,
             "role_description": self.role_description,
@@ -215,7 +225,18 @@ class TwitterAgent(AgentBase):
             "tweet_page":self.page.to_string() if self.page else "",
             "info_box": self.info_box.to_string()
         }
-        return Template(self.context_prompt_template).safe_substitute(input_arguments)
+        
+        Template(self.context_prompt_template).safe_substitute(input_arguments)
+        seeable_template='''
+        you are ${agent_name}, ${role_description}.
+        Your personal history is:${personal_history}
+        the current time is ${current_time}.
+        The trigger news is ${trigger_news}.
+        The tweet page is ${tweet_page}.
+        The info box is ${info_box}.
+        '''
+        template=Template(seeable_template).safe_substitute(input_arguments)
+        return template
 
     def _fill_context_for_retrieval(self, env_description: str = "") -> str:
         """Fill the placeholders in the prompt template
@@ -371,14 +392,12 @@ class TwitterAgent(AgentBase):
         env_prompt = self._fill_prompt_template(env_description)
         
         # prepare prompt
-        prompt = self.model.format(
-            Msg("system", task_prompt, "system"),
-            Msg("system", env_prompt, "system"),
+        # 确保 memory 和 x 都是字符串类型
+        memory_content = self.memory.to_string() if self.memory else str(x)
 
-            self.memory
-            and Msg("system", content=self.memory.to_string(), role="system")
-            or x,  # type: ignore[arg-type]
-        )
+        prompt = [{"role": "system", "content": task_prompt + env_prompt + memory_content}]
+        
+
         
         parsed_response, reaction, target, parent_id = None, None, None, None
         
@@ -386,7 +405,7 @@ class TwitterAgent(AgentBase):
         #raw_response = self.model(prompt)
         for i in range(self.max_retry):
             try:
-                print(prompt)
+                
                 raw_response = await agenerate_response(prompt)
                 parsed_response = self.output_parser.parse(raw_response)
 

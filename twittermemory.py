@@ -41,7 +41,9 @@ import string
 import numpy as np
 import openai
 from openai import OpenAI,AsyncOpenAI
-aclient = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"),)
+from dotenv import load_dotenv, find_dotenv
+_ = load_dotenv(find_dotenv())
+aclient = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"),base_url=os.environ.get("OPENAI_BASE_URL"))
 
 
 class BaseMemory(BaseModel):
@@ -503,8 +505,8 @@ class PersonalMemory(BaseMemory):
     memory_path: str = None
     target: str = "support HK peace"
     top_k: str = 5
-    deadline: str = None
-    model: str = "gpt-3.5-turbo"
+    deadline: str = Field(default='2025-08-11T10:51:26+08:00')
+    model: str = "llama"
     has_summary: bool = False
     max_summary_length: int = 200
     summary: str = ""
@@ -516,6 +518,7 @@ Observations:
 """
 {new_events}
 """
+Just output your summary, don't say anything else.
 '''
     RETRIVEAL_QUERY:str='''What is your opinion on {target} or other political and social issues?'''
 
@@ -528,22 +531,26 @@ Observations:
         self.model = llm
         # load the historical tweets of the user
         if self.memory_path is not None and os.path.exists(self.memory_path):
-            print('load ',self.memory_path)
-            df = open(self.memory_path,'r',errors='ignore').readlines()
             content_set = set()
-            for d in df:
-                d = json.loads(d)
-                content = d["rawContent"]
-                content = re.sub(r"\n+", "\n", content)
-                content.replace('\n',' ')
-                if content in content_set or len(content.split())<10:continue
-                content_set.add(content)
-                post_time = d["date"][:19]
-                if post_time>self.deadline:continue
-                sender = d["user"]["username"]
-                if sender !=self.memory_path.split('/')[-1][:-4]:continue
-                message = TwitterMessage(name="memory",role="assistant",content=content, post_time=post_time, sender=sender)
-                self.messages.append(message)
+            expected_sender = os.path.splitext(os.path.basename(self.memory_path))[0]
+            print('load ',self.memory_path)
+            with open(self.memory_path, 'r', encoding='utf-8', errors='ignore') as f:
+                for line in f:
+                    parts = line.strip().split("\t")
+                   
+                    content, post_time, sender = expected_sender+'remark:'+parts[24].strip()+'on original weibo'+parts[14].strip(), parts[6].strip(), parts[3].strip()
+                    content = re.sub(r"\n+", " ", content)
+
+                    if content in content_set:
+                        continue
+                    content_set.add(content)
+    
+                    if post_time > self.deadline or sender != expected_sender:
+                        continue
+
+                    self.messages.append(TwitterMessage(
+                        name="memory", role="assistant", content=content, post_time=post_time, sender=sender
+                    ))
             
         else:
             print(self.memory_path,' does not exist!')
@@ -578,7 +585,7 @@ Observations:
         )
             
             self.summary =  response.choices[0].message.content   
-            message = Msg(content=self.summary)
+            message = Msg(content=self.summary,name='memory',role='assistant')
             self.add_message([message])
         
     def to_string(self, add_sender_prefix: bool = False) -> str:   

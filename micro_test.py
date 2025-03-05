@@ -34,6 +34,7 @@ class Simulation_Align:
         agents = []
         for agent_configs in task_config["agents"]:
             agent = load_agent(agent_configs)
+            
             agents.append(agent)
         
         # Build the environment
@@ -60,7 +61,7 @@ class Simulation_Align:
             asyncio.run(self.environment.step())
             self.environment.save_data_collector()
             #self.save_ckpt()
-        self.environment.report_metrics()
+        #self.environment.report_metrics()
         self.environment.save_data_collector()
 
     def save_ckpt(self):

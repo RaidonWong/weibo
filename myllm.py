@@ -76,7 +76,7 @@ class BaseCompletionModel(BaseLLM):
 
 
 class OpenAIChatArgs(BaseModelArgs):
-    model: str = Field(default="gpt-3.5-turbo")
+    model: str =  Field(default='/root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct')
     deployment_id: str = Field(default='text-embedding-ada-002')
     max_tokens: int = Field(default=2048)
     temperature: float = Field(default=1.0)
@@ -105,8 +105,8 @@ class OpenAIChat(BaseChatModel):
             args[k] = kwargs.pop(k, v)
         if len(kwargs) > 0:
             logger.warn(f"Unused arguments: {kwargs}")
-        if args["model"] in LOCAL_LLMS:
-            openai.api_base = "http://localhost:5000/v1"
+        #if args["model"] in LOCAL_LLMS:
+            #openai.api_base = "http://localhost:5000/v1"
         super().__init__(args=args, max_retry=max_retry)
 
     @classmethod

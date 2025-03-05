@@ -117,13 +117,13 @@ agents:
   llm:
     llm_type: gpt-3.5-turbo
     max_tokens: 256
-    model: gpt-3.5-turbo-0613
+    model: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
     temperature: 1
   memory:
     llm:
       llm_type: gpt-3.5-turbo
       max_new_tokens: 256
-      model: gpt-3.5-turbo-0613
+      model: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
       temperature: 1
     memory_type: twitter
   memory_manipulator:
@@ -134,8 +134,8 @@ agents:
   page:
     page_type: timeline
   personal_history:
-    deadline: '2022-06-24 22:00:00'
-    llm: gpt-3.5-turbo-0613
+    deadline: '2025-06-24 22:00:00'
+    llm: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
     memory_path: /root/wangliang/AgentSpace/AgentSpace-main/twitter/user_tweet/a***l.txt
     memory_type: personal_history
     target: the surppoet of HK government and police
@@ -149,7 +149,7 @@ agents:
     about issues such as freedom, justice, equality, and the climate crisis. a***l
     express a***l's views on various topics, including police response, voting
     rights, reproductive rights, conservative judges, and COVID-19 treatments.
-  model_config_name: "gpt-4o-agent"
+  model_config_name: "llama"
 - agent_type: twitter
   context_prompt_template: *context_prompt
   current_time: '2022-06-24 22:00:00'
@@ -158,13 +158,13 @@ agents:
   llm:
     llm_type: gpt-3.5-turbo
     max_tokens: 256
-    model: gpt-3.5-turbo-0613
+    model: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
     temperature: 1
   memory:
     llm:
       llm_type: gpt-3.5-turbo
       max_new_tokens: 256
-      model: gpt-3.5-turbo-0613
+      model: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
       temperature: 1
     memory_type: twitter
   memory_manipulator:
@@ -176,7 +176,7 @@ agents:
     page_type: timeline
   personal_history:
     deadline: '2022-06-24 22:00:00'
-    llm: gpt-3.5-turbo-0613
+    llm: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
     memory_path: /root/wangliang/AgentSpace/AgentSpace-main/twitter/user_tweet/P***n.txt
     memory_type: personal_history
     target: the support of HK government and police
@@ -188,7 +188,7 @@ agents:
     is passionate about causes P***n strongly believe in and prioritize sharing
     information for the benefit of others. P***n''s short bio mentions being
     a woman and an atheist. P***n''s tweets express support for the Police.'
-  model_config_name: "gpt-4o-agent"
+  model_config_name: "llama"
 - agent_type: twitter
   context_prompt_template: *context_prompt
   current_time: '2022-06-24 22:00:00'
@@ -197,13 +197,13 @@ agents:
   llm:
     llm_type: gpt-3.5-turbo
     max_tokens: 256
-    model: gpt-3.5-turbo-0613
+    model: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
     temperature: 1
   memory:
     llm:
       llm_type: gpt-3.5-turbo
       max_new_tokens: 256
-      model: gpt-3.5-turbo-0613
+      model: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
       temperature: 1
     memory_type: twitter
   memory_manipulator:
@@ -215,7 +215,7 @@ agents:
     page_type: timeline
   personal_history:
     deadline: '2022-06-24 22:00:00'
-    llm: gpt-3.5-turbo-0613
+    llm: /root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct
     memory_path: /root/wangliang/AgentSpace/AgentSpace-main/twitter/user_tweet/H***t.txt
     memory_type: personal_history
     target: the protection of Abortion Rights
@@ -227,4 +227,4 @@ agents:
     certain issues and are motivated to share information for the benefit of others.
     H***t's political leaning is right, and H***t engage in discussions and
     express H***t's opinions on various topics.
-  model_config_name: "gpt-4o-agent"
+  model_config_name: "llama"

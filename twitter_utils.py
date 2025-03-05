@@ -27,13 +27,13 @@ from agentscope.msghub import msghub
 from agentscope.models import ModelResponse
 from mylogging import Logger
 import openai
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI,OpenAI
 from aiohttp import ClientSession
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
-aclient = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"),base_url=os.environ.get("OPENAI_API_URL"))
-
+aclient = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"),base_url=os.environ.get("OPENAI_BASE_URL"))
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"),base_url=os.environ.get("OPENAI_BASE_URL"))
 class LLMResult(BaseModel):
     content: str = ""
     function_name: str = ""
@@ -98,7 +98,7 @@ class TwitterMessage(Msg):
         num_like: int = 0,
         receiver: Set[str] = None,
         embedding: list = None,
-        need_embedding: bool = True,
+        need_embedding: bool = False,
         url: Optional[Union[str, List[str]]] = None,
         metadata: Optional[Union[dict, str]] = None,
         echo: bool = False,
@@ -491,7 +491,7 @@ class BaseModelArgs(BaseModel):
     pass
 
 class OpenAIChatArgs(BaseModelArgs):
-    model: str = Field(default="gpt-3.5-turbo")
+    model: str = Field(default="llama")
     deployment_id: str = Field(default=None)
     max_tokens: int = Field(default=2048)
     temperature: float = Field(default=1.0)
@@ -502,20 +502,19 @@ class OpenAIChatArgs(BaseModelArgs):
     frequency_penalty: int = Field(default=0)
 
 async def agenerate_response(
-        prepend_prompt: str = "",
-        history: List[dict] = [],
-        append_prompt: str = "",
-        functions: List[dict] = [],
+        prompt
     ) -> LLMResult:
-        messages = construct_messages(prepend_prompt, history, append_prompt)
+        #messages = construct_messages(prepend_prompt, history, append_prompt)
         logger = Logger()
-        logger.log_prompt(messages)
+        logger.log_prompt(prompt)
         args = OpenAIChatArgs()  # 创建实例
-
+        
         try:
+                
                 response = await aclient.chat.completions.create(
-                        messages=messages,
-                        model="gpt-4",
+                #response = await client.chat.completions.create(
+                        messages=prompt,
+                        model = "/root/autodl-tmp/liuxiaoyou/models/meta-llama/Meta-Llama-3-8B-Instruct",
                     )
                 
                 collect_metrics(response)
